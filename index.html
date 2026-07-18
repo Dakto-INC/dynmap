@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#222222">
 	<link rel="manifest" href="./live-atlas/favicons/site.webmanifest">
 	<link rel="icon" href="./dki-1.ico">
-    <link rel=”mask-icon” href="./live-atlas/favicons/mask.svg" color="#cccccc">
+    <link rel="mask-icon" href="./live-atlas/favicons/mask.svg" color="#cccccc">
     <link rel="apple-touch-icon" sizes="180x180" href="./live-atlas/favicons/apple-touch-icon.png">
 
     <meta name="keywords" content="minecraft, map, dynamic, liveatlas" />
@@ -49,16 +49,58 @@
   markers: 'cumtiles/'
                           },
          },
- 
-              anarchy: {
-             label: 'Anarchy',
-         pl3xmap: "an/"
-                    },
+	archive: {
+		label: 'Archive',
+		dynmap: {
+			configuration: 'arcup/configuration',
+	update: 'arcup/world/{world}/{timestamp}',
+	sendmessage: 'arcup/sendmessage',
+	login: 'arcup/login',
+	register: 'arcup/register',
+	tiles: 'arctiles/',
+	markers: 'arctiles/',
+		},
+	},
+	
+	terra: {
+		label: 'Terra',
+		dynmap: {
+			configuration: 'terup/configuration',
+  update: 'terup/world/{world}/{timestamp}',
+  sendmessage: 'terup/sendmessage',
+  login: 'terup/login',
+  register: 'terup/register',
+  tiles: 'tertiles/',
+  markers: 'tertiles/',
+		},
+	},
+
+
+         anarchy: {
+             	   label: 'Anarchy',
+             	   dynmap: {
+		      	   configuration: 'anup/configuration',
+  update: 'anup/world/{world}/{timestamp}',
+  sendmessage: 'anup/sendmessage',
+  login: 'anup/login',
+  register: 'anup/register',
+  tiles: 'antiles/',
+  markers: 'antiles/',
+		  },
+	},
       
-              lobby: {
-             label: 'Lobby',
-         pl3xmap: "lo/"
-                    },
+         lobby: {
+             	 label: 'Lobby',
+		 dynmap: {
+			 configuration: 'loup/configuration',
+  update: 'loup/world/{world}/{timestamp}',
+  sendmessage: 'loup/sendmessage',
+  login: 'loup/login',
+  register: 'loup/register',
+  tiles: 'lotiles/',
+  markers: 'lotiles/',
+                  },
+        },
 },
 
             // These messages are used throughout LiveAtlas and can be translated here
@@ -134,7 +176,7 @@
 
             ui: {
             	// If true, player markers will always be displayed in front of other marker types
-            	playersAboveMarkers: true,
+            	playersAboveMarkers: false,
 
                 // Whether to enable the player list search box
                 playersSearch: true,
@@ -330,6 +372,7 @@
     <script type="module" crossorigin src="./live-atlas/assets/index.a82d2099.js"></script>
     <link rel="modulepreload" href="./live-atlas/assets/vendor.d0ab50b1.js">
     <link rel="stylesheet" href="./live-atlas/assets/index.1de34b3a.css">
+    <link rel="stylesheet" href="dynmap-classic-theme.css">
   </head>
   <body>
     <div id="splash">
